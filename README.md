@@ -1,6 +1,6 @@
 # Coverage model
 
-This code build coverage model [Modeling Coverage for Neural Machine Translation](https://arxiv.org/abs/1601.04811) by pytorch with multi-gpu function.
+This code reproduces coverage model *[Modeling Coverage for Neural Machine Translation](https://arxiv.org/abs/1601.04811)* by pytorch with multi-gpu function.
 
 ## Requirements
 
