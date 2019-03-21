@@ -1,1 +1,1 @@
-# seq2seq
+# Replicate coverage model by Pytorch
