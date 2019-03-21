@@ -7,8 +7,6 @@ Created on Wed Nov 28 10:28:32 2018
 import os 
 #set parameters    
 data = '/home/lr/zhang/multi_gpu/data/'
-PAIRS_FILE=data+'20181226standford_pairs.pk'
-WORD_EMBEDDING_FILE=data+'20190112_standford1000d_lang.pk' #'20181224langs_500d.pk' '20180820langs.pk'
 MODEL_FILE='data/20190206model_only_coverage'
 BATCH_SIZE=128  
 BATCH_SIZE_TEST=1 
