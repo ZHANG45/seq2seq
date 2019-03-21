@@ -6,7 +6,7 @@ This code reproduces model *[Modeling Coverage for Neural Machine Translation](h
 
 [torchtext](https://github.com/pytorch/text)==0.2.3
 
-python==3.5.0
+python==3.x
 
 pytorch==0.4.0
 
