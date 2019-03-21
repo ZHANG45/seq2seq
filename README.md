@@ -1,6 +1,6 @@
 # Coverage model
 
-This code reproduces coverage model *[Modeling Coverage for Neural Machine Translation](https://arxiv.org/abs/1601.04811)* by pytorch with multi-gpu function.
+This code reproduces model *[Modeling Coverage for Neural Machine Translation](https://arxiv.org/abs/1601.04811)* by pytorch with multi-gpu function.
 
 ## Requirements
 
@@ -16,7 +16,7 @@ pytorch==0.4.0
 python preprocessing.py
 ``` 
 
-Remember to set your parameters in file ```DefinedParameters.py```
+Remember to set parameters *train_src_file, train_trg_file, valid_src_file, valid_trg_file, test_src_file, test_trg_file* in file ```DefinedParameters.py```
 
 ## Training 
 
@@ -24,5 +24,5 @@ Remember to set your parameters in file ```DefinedParameters.py```
 python start.py
 ```
 
-Remember to set your parameters in file ```DefinedParameters.py```
+Remember to set parameter *SET* in file ```DefinedParameters.py```
 
