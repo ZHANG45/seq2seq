@@ -6,8 +6,8 @@ Created on Wed Nov 28 10:28:32 2018
 """
 import os 
 #set parameters    
-data = '/home/lr/zhang/multi_gpu/data/'
-MODEL_FILE='data/20190206model_only_coverage'
+data = 'data/'
+MODEL_FILE=data+'20190206_coverage'
 BATCH_SIZE=128  
 BATCH_SIZE_TEST=1 
 VOCAB_SIZE=50000 
@@ -35,12 +35,12 @@ HIDDEN=1000
 MAX_FERTILITY=3
 
 #file
-train_src_file = '/home/lr/zhang/europarl-v7/train.en'
-train_trg_file = '/home/lr/zhang/europarl-v7/train.de'
-valid_src_file = '/home/lr/zhang/europarl-v7/newstest2013.en'
-valid_trg_file = '/home/lr/zhang/europarl-v7/newstest2013.de'
-test_src_file = '/home/lr/zhang/europarl-v7/newstest2014.en'
-test_trg_file = '/home/lr/zhang/europarl-v7/newstest2014.de'
+train_src_file = 'europarl-v7/train.en'
+train_trg_file = 'europarl-v7/train.de'
+valid_src_file = 'europarl-v7/newstest2013.en'
+valid_trg_file = 'europarl-v7/newstest2013.de'
+test_src_file = 'europarl-v7/newstest2014.en'
+test_trg_file = 'europarl-v7/newstest2014.de'
 TRAIN_FILE=data+'train.tsv'
 VALID_FILE=data+'valid.tsv'
 TEST_FILE=data+'test.tsv'
