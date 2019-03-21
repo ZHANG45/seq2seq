@@ -1,8 +1,8 @@
 # Coverage model
 
-This code build coverage model https://arxiv.org/abs/1601.04811 by pytorch with multi-gpu function.
+This code build coverage model [Modeling Coverage for Neural Machine Translation](https://arxiv.org/abs/1601.04811) by pytorch with multi-gpu function.
 
-## Environment
+## Requirements
 
 [torchtext](https://github.com/pytorch/text)==0.2.3
 
@@ -10,9 +10,19 @@ python==3.5.0
 
 pytorch==0.4.0
 
-## Run
-Parameters are set in file ```DefinedParameters.py```
+## Preprocessing
 
-Use ```python preprocessing.py``` to generate preprocessed data file.
+```
+python preprocessing.py
+``` 
 
-Use ```python start.py``` to run your model.
+Remember to set your parameters in file ```DefinedParameters.py```
+
+## Training 
+
+```
+python start.py
+```
+
+Remember to set your parameters in file ```DefinedParameters.py```
+
