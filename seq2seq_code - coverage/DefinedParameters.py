@@ -16,15 +16,14 @@ MAX_LENGTH_EVALUATE=50
 
 
 #changed parameters
-SET='continue' #continue, evaluate, moto, 
-EVELUAGE_METHOD='greedy_decode' #beam_search greedy_decode
+SET='moto' #moto: train a new model.  continue : continue your training from a trained model.  evaluate: generate test result by trained model。
+EVELUAGE_METHOD='greedy_decode' 
 USE_COVERAGE=True
-REVERSE_TRANSLATION=True
 
 #gpu
 DEVICE='cuda'
-DEVICES=[2,3]
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+DEVICES=[2,3] #your gpu device
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1" #always start from 0
 
 #fixed parameters
 USE_Tanh=True
