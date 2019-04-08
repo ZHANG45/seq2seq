@@ -9,7 +9,7 @@ import torch
 from tqdm import tqdm
 from beam import Beam
 
-from DefinedParameters import TRAINSLATION_FILE, EVALUATE_FILE, BEAM_SIZE, CHOOSE_DATASET, SET, REPLACE_UNK, TEST_FILE, USE_LengthNormalization
+from DefinedParameters import TRAINSLATION_FILE, EVALUATE_FILE, BEAM_SIZE, SET, REPLACE_UNK, TEST_FILE, USE_LengthNormalization
 
 def label2word(labels, vocab_itos):
     sentence = [vocab_itos[label] for label in labels]
@@ -172,6 +172,3 @@ def translate_step(model, iter, vocab, max_len):
         for cand in candidate:
             f2.write(' '.join(cand) + '\n')
 
-    with open(EVALUATE_FILE,'a+') as f:
-        f.write(CHOOSE_DATASET+' '+SET+'\n')
-        f.write('\n')
