@@ -133,13 +133,13 @@ class Decoder(nn.Module):
             #word Bx1
             #weight Bxlen(input)x1
             out, context, weight, last_state = self.forward_step(
-                     word, context, encoder_states, last_states, attn_weights, src_mask, trg_mask)
+                     word, context, encoder_states, last_states, attn_weights, src_mask, trg_mask, fertility)
             output.append(out)
             attn_weights = torch.cat((attn_weights,weight), 2)    
         attn_weights = attn_weights[:, :, 1:] #BXlen(input)xlen(target)
         return output
 
-    def forward_step(self, word, context, encoder_states, states, attn_weights, src_mask, trg_mask):
+    def forward_step(self, word, context, encoder_states, states, attn_weights, src_mask, trg_mask, fertility):
         # Embedding
         ex = self.embed(word) #BxH
         ex = self.dropout(ex)
@@ -154,7 +154,7 @@ class Decoder(nn.Module):
 
         rnn_output, status = self.lstm(rnn_input, states)
         # 文脈ベクトルを計算
-        context, weight = self.attention(rnn_output, encoder_states, attn_weights, src_mask, trg_mask, self.fertility) 
+        context, weight = self.attention(rnn_output, encoder_states, attn_weights, src_mask, trg_mask, fertility) 
         # 拡張した次元を元に戻す
         rnn_output = torch.squeeze(rnn_output, 0)
         t = torch.cat((rnn_output, context), 1) #Bx2H
