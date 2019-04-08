@@ -17,7 +17,7 @@ MAX_LENGTH_EVALUATE=50
 
 #changed parameters
 SET='moto' #moto: train a new model.  continue : continue your training from a trained model.  evaluate: generate test result by trained model。
-EVELUAGE_METHOD='greedy_decode' 
+BEAM_SIZE=12
 USE_COVERAGE=True
 
 #gpu
@@ -28,6 +28,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1" #always start from 0
 #fixed parameters
 USE_Tanh=True
 USE_LengthNormalization=True
+REPLACE_UNK=True
 
 EPOCH=20
 EMBED=1000
